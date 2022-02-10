@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.row{
+    margin: 0;
+}
+.img-custom-size{
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.our-vision{
+    background-color: #63768d;
+}
+.our-mission{
+    background-color: #eb6534;
+}
+.our-objectives{
+    background-color: #dcd6f7;
+}
+.vision-line{
+    border-bottom: 2px solid black;
+}
+.mission-line{
+    border-bottom: 2px solid black;
+}
+.objectives-line{
+    border-bottom: 2px solid black;
+}
+.our-vision-content>h1{
+    margin-bottom: 25px;    
+}
+.our-vision-content>p{
+    font-size: 18px;
+    font-weight: 500    ;
+    line-height: 2;
+    color: white;
+}
+.our-mission-content>h1{
+    margin-bottom: 25px;
+}
+.our-mission-content>p{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 2;
+}
+.our-objectives-content>h1{
+    margin-bottom: 25px;
+    font-size: 2.3rem;
+}
+.our-objectives-content>ul>li{
+    font-size: 18px;
+    font-weight: bold;
+
+
+}
+@media(max-width: 560px){
+    .our-vision-content,.our-mission-content,.our-objectives-content{
+        margin-top: 15px;
+    }
+}
