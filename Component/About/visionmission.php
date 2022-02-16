@@ -3,7 +3,7 @@
     <div class="col-md-12 col-sm-12">
         <div class="row p-5">
             <div class="our-vision-img col-md-6 col-sm-12 slide-left" data-tilt>
-                <img src="Img/Gallery 2.jfif" alt="" class="img-fluid img-custom-size">
+                <img src="Img/OurMission.png" alt="" class="img-fluid img-custom-size">
             </div>
             <div class="our-vision-content offset-md-1 col-md-5  col-sm-12 slide-right">
                 <h1>
@@ -20,18 +20,18 @@
 <div class="our-mission">
     <div class="col-md-12 col-sm-12">
         <div class="row p-5">
-            <div class="our-mision-img col-md-6 col-sm-12 slide-left" data-tilt>
-                <img src="Img/Gallery 2.jfif" alt="" class="img-fluid img-custom-size">
-            </div>
-            <div class="our-mission-content offset-md-1 col-md-5  col-sm-12 slide-right">
+            <div class="our-mission-content offset-md-1 col-md-5  col-sm-12 slide-right ms-1 me-4">
                 <h1>
                     <span class="mission-line">Our Mission</span>
-
+                    
                 </h1>
-
+                
                 <p> To render selfless service to society in general and the differently abled in particular through the mobilization of available resources from national and international philanthropists is our mission. To unearth the inherent talents of the hitherto ignored or neglected potential of the differently abled by motivating them to set a side inhibition so as to face the society with the god gifted abilities.</p>
             </div>
-
+            <div class="our-mision-img col-md-6 col-sm-12 slide-left ms-5" data-tilt>
+                <img src="Img/OurVision.png" alt="" class="img-fluid img-custom-size">
+            </div>
+            
         </div>
     </div>
 </div>
@@ -40,7 +40,7 @@
     <div class="col-md-12 col-sm-12">
         <div class="row p-5">
             <div class="our-objectives-img   col-md-6 col-sm-12 slide-left" data-tilt>
-                <img src="Img/Gallery 2.jfif" alt="" class="img-fluid img-custom-size">
+                <img src="Img/OurObjective.png" alt="" class="img-fluid img-custom-size">
             </div>
             <div class="our-objectives-content offset-md-1 col-md-5  col-sm-12 slide-right">
                 <h1>

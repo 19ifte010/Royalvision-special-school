@@ -10,15 +10,15 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-md-auto gap-4 nav-center">
                 <li class="nav-item rounded">
-                    <a class="nav-link" href="index.php">Home</a>
+                    <a class="nav-link hover-en" href="index.php">Home</a>
                 </li>
                 <li class="nav-item rounded">
-                    <a class="nav-link" href="About.php">About us</a>
+                    <a class="nav-link hover-en" href="About.php">About us</a>
                 </li>
                 <li class="nav-item dropdown rounded">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Projects</a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Special school</a></li>
+                        <li><a class="dropdown-item" href="specialSchool.php">Special school</a></li>
                         <li><a class="dropdown-item" href="#">Rehabilitation Centre</a></li>
                         <li><a class="dropdown-item" href="#">Special welfare school</a></li>
                         <li><a class="dropdown-item" href="#">Community Based program</a></li>
@@ -30,13 +30,10 @@
                 </li>
 
                 <li class="nav-item rounded">
-                    <a class="nav-link" href="#">Events</a>
+                    <a class="nav-link hover-en" href="#">Events</a>
                 </li>
                 <li class="nav-item rounded">
-                    <a class="nav-link" href="#">Donators</a>
-                </li>
-                <li class="nav-item rounded">
-                    <a class="nav-link" href="#">Committee</a>
+                    <a class="nav-link hover-en" href="#">Committee</a>
                 </li>
                 <li class="nav-item dropdown rounded">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Activities</a>
@@ -46,7 +43,7 @@
                     </ul>
                 </li>
                 <li class="nav-item rounded">
-                    <a class="nav-link" href="#">Contact us</a>
+                    <a class="nav-link hover-en" href="#">Contact us</a>
                 </li>
             </ul>
         </div>

@@ -1,3 +1,4 @@
+<!-- Header -->
 <?php include 'includes/header.php' ?>
 
 <!-- Navbar -->
@@ -6,8 +7,8 @@
 <!-- Our vision Our mission Our Objective -->
 <?php include 'Component/About/visionmission.php' ?>
 
-<?php include 'Component/footer.php' ?>
+<!-- Footer -->
+<?php include 'includes/footer.php' ?>
  
 
   
-<?php include 'includes/footer.php' ?>

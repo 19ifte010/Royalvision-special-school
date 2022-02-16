@@ -1,43 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 body{
     font-family: 'Open Sans', sans-serif;
+    background-color: #DCD6F7 !important;
 }
 .row{
     margin: 0;
 }
+
 .img-custom-size{
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.our-vision{
-    background-color: #63768d;
-}
-.our-mission{
-    background-color: #eb6534;
-}
-.our-objectives{
-    background-color: #dcd6f7;
-}
-.vision-line{
-    border-bottom: 2px solid black;
-}
-.mission-line{
-    border-bottom: 2px solid black;
-}
-.objectives-line{
-    border-bottom: 2px solid black;
-}
 .our-vision-content>h1{
     margin-bottom: 25px;    
+    background-color: #2b5876;
+    padding: 5px;
+    text-align: center;
+    color: #ffffff;
 }
 .our-vision-content>p{
     font-size: 18px;
     font-weight: 500    ;
     line-height: 2;
-    color: white;
+    color: black;
+    font-weight: bold;
 }
 .our-mission-content>h1{
+    margin-left: 5px;
     margin-bottom: 25px;
+    background-color: #2b5876;
+    padding: 5px;
+    text-align: center;
+    color: #ffffff;
+
 }
 .our-mission-content>p{
     font-size: 18px;
@@ -47,12 +42,18 @@ body{
 .our-objectives-content>h1{
     margin-bottom: 25px;
     font-size: 2.3rem;
+    background-color: #2b5876;
+    padding: 5px;
+    text-align: center;
+    color: #ffffff;
+
 }
 .our-objectives-content>ul>li{
     font-size: 18px;
     font-weight: bold;
-
-
+}
+.contain_h1{
+    position: relative;
 }
 @media(max-width: 560px){
     .our-vision-content,.our-mission-content,.our-objectives-content{

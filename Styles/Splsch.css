@@ -1,0 +1,13 @@
+.spshcl_content{
+    position: relative;    
+}
+.spschl_text_line::after{
+    content: "";
+    background-color: #2b5876;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: -20%;
+    width: 100%;
+
+}

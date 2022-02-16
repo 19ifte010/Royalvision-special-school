@@ -1,8 +1,4 @@
-
-<!--  Code Header in main branch commit -->
-
-<!--  Code Header  in original main branch -->
-
+<!-- header -->
 <?php include 'includes/header.php' ?>
 
 <!-- Navbar -->
@@ -18,7 +14,4 @@
 <?php include 'Component/Home/gallery.php'?>
 
 <!-- footer -->
-<?php include 'Component/footer.php' ?>
-
-
 <?php include 'includes/footer.php' ?>
