@@ -12,8 +12,8 @@
     color: white !important;
     font-style: bold;
     position: relative;
-    font-weight: 600;
-    letter-spacing: 2px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
 }
 .nav-center > li > a.hover-en::after{
     content: "";
@@ -40,7 +40,6 @@ color: black !important;
 }
 .nav-padding{
     padding: 20px;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     
 }
 .nav-color{
@@ -224,11 +223,11 @@ color: black !important;
     background-color: #F05D5E !important;
 }
 .social-icon-bg{
-    background-color: #B9FBC0;
+    background-color: #F05D5E;
 }
 .icon_text_color{
     background-color: #2b5876;
     padding: 17px;
     border-radius: 50%;
-    color: #F05D5E;
+    color: white;
 }

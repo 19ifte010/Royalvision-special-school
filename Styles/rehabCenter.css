@@ -1,0 +1,25 @@
+.servicesList{
+    width: 95%;
+    margin: auto;
+}
+.services{
+    background-color: #e67474;
+    padding: 7px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.service-1{
+    background-color: #f3ca20 !important;
+    display: flex;
+    justify-content: space-between;
+}
+.service-1 > p{
+    margin-left: 0;
+
+}
+.services > p{
+    font-size: 19px;
+    font-weight: 800;
+    margin-left: 81px;  
+
+}

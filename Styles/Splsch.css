@@ -11,3 +11,15 @@
     width: 100%;
 
 }
+
+.form_heading{
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+.form_heading_line{
+    width: max-content;
+    padding-bottom:5px ;
+    border-bottom: 4px solid #2b5876;
+}

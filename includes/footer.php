@@ -3,9 +3,9 @@
         <div class="row py-4 d-flex align-item-center">
             <div class="col-md-12 text-center">
                 <a href="#"><i class="fab fa-facebook-f icon_text_color me-5"></i></a>
-                <a href="#"><i class="fab fa-facebook-f icon_text_color me-5"></i></a>
-                <a href="#"><i class="fab fa-facebook-f icon_text_color me-5"></i></a>
-                <a href="#"><i class="fab fa-facebook-f icon_text_color "></i></a>
+                <a href="#"><i class="fab fa-instagram icon_text_color me-5"></i></a>
+                <a href="#"><i class="fab fa-youtube icon_text_color me-5"></i></a>
+                <a href="#"><i class="fab fa-twitter icon_text_color "></i></a>
             </div>
         </div>
     </div>
@@ -27,7 +27,7 @@
                     <li><i></i>2/85, Parampupatti road</li>
                     <li><i></i>SN College poast, Perungudi</li>
                     <li><i></i>Madurai-625022</li>
-                    <li><i></i>Email: <a href="#" class="text-success">royalvision.mdu@gmail.com</a></li>
+                    <li><i></i>Email: <a href="https://mail.google.com/mail/u/?authuser=royalvision.mdu@gmail.com" class="text-danger">royalvision.mdu@gmail.com</a></li>
 
 
                 </ul>
@@ -36,6 +36,7 @@
             <div class="col-md-4 mx-auto mb-4">
                 <h6 class="text-uppercase font-weight-bold">Location</h6>
                 <span class="mb-4 mt-0 d-inline-block mx-auto" style="width: 125px; height:4px; background-color: #F05D5E"></span>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3931.132491531302!2d78.07724831487747!3d9.839237992961502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00d01300000023%3A0xaf76808436fdd111!2sROYALVISION%20SPECIAL%20SCHOOL%20(MR)!5e0!3m2!1sen!2sin!4v1645024815644!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
             </div>
         </div>

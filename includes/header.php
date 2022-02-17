@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="Styles/Styles.css">
     <link rel="stylesheet" href="Styles/About.css">
     <link rel="stylesheet" href="Styles/splsch.css">
+    <link rel="stylesheet" href="Styles/rehabCenter.css">
+
 
 </head>
 <body>
