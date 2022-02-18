@@ -7,7 +7,7 @@
 <!-- Certificate heading -->
 <div class="container">
     <div class="row d-flex justify-content-center mt-5 mb-5">
-        <h1 style="color: #2b5876; border-bottom: 2px solid #2b5876; width: max-content" class="pb-2">Certificates</h1>
+        <h1 style="color: #2b5876; border-bottom: 2px solid #2b5876; width: max-content; font-weight: bolder" class="pb-2">Certificates</h1>
     </div>
 
     <div class="row">
