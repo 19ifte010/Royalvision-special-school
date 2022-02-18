@@ -29,7 +29,7 @@
                 </li>
 
                 <li class="nav-item rounded">
-                    <a class="nav-link hover-en" href="#">Events</a>
+                    <a class="nav-link hover-en" href="Events.php">Events</a>
                 </li>
                 <li class="nav-item rounded">
                     <a class="nav-link hover-en" href="#">Committee</a>
@@ -38,7 +38,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Activities</a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">Awards</a></li>
-                        <li><a class="dropdown-item" href="#">Certificates</a></li>
+                        <li><a class="dropdown-item" href="certificate.php">Certificates</a></li>
                     </ul>
                 </li>
                 <li class="nav-item rounded">
