@@ -65,18 +65,18 @@
     <h1 style="color: #2b5876; border-bottom: 2px solid #2b5876; width: max-content" class="pb-2 mb-5">Sports Day</h1>
     <div class="row">
         <div class="col-md-4 mb-5">
-            <a href="Img/Events/School Activity/img1.png" data-fancybox="img1" data-title="My caption">
-                <img src="Img/Events/School Activity/img1.png" alt="img1" width="300" height="300">
+            <a href="Img/Events/Sports Day/img1.png" data-fancybox="img1" data-title="My caption">
+                <img src="Img/Events/Sports Day/img1.png" alt="img1" width="300" height="300">
             </a>
         </div>
         <div class="col-md-4 mb-5">
-            <a href="Img/Events/School Activity/img2.png" data-fancybox="img1" data-title="My caption">
-                <img src="Img/Events/School Activity/img2.png" alt="img2" width="300" height="300">
+            <a href="Img/Events/Sports Day/img2.png" data-fancybox="img1" data-title="My caption">
+                <img src="Img/Events/Sports Day/img2.png" alt="img2" width="300" height="300">
             </a>
         </div>
         <div class="col-md-4 mb-5">
-            <a href="Img/Events/School Activity/img3.png" data-fancybox="img1" data-title="My caption">
-                <img src="Img/Events/School Activity/img3.png" alt="img3" width="300" height="300">
+            <a href="Img/Events/Sports Day/img3.png" data-fancybox="img1" data-title="My caption">
+                <img src="Img/Events/Sports Day/img3.png" alt="img3" width="300" height="300">
             </a>
         </div>
 
