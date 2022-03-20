@@ -2,10 +2,10 @@
     <div class="social-icon-bg">
         <div class="row py-4 d-flex align-item-center">
             <div class="col-md-12 text-center">
-                <a href="#"><i class="fab fa-facebook-f icon_text_color me-5"></i></a>
-                <a href="#"><i class="fab fa-instagram icon_text_color me-5"></i></a>
-                <a href="#"><i class="fab fa-youtube icon_text_color me-5"></i></a>
-                <a href="#"><i class="fab fa-twitter icon_text_color "></i></a>
+                <a href="https://www.facebook.com/ulagasandron/?ref=pages_you_manage" target="_blank_"><i class="fab fa-facebook-f icon_text_color me-5"></i></a>
+                <a href="https://instagram.com/royalvisionmadurai?utm_medium=copy_link    " target="_blank_"><i class="fab fa-instagram icon_text_color me-5"></i></a>
+                <a href="https://www.youtube.com/channel/UCAw8cOfsm_ohJdzNEKyF9XQ" target="_blank_"><i class="fab fa-youtube icon_text_color me-5"></i></a>
+                <a href="https://twitter.com/RoyalMadurai" target="_blank_"><i class="fab fa-twitter icon_text_color "></i></a>
             </div>
         </div>
     </div>
@@ -44,15 +44,21 @@
 </footer>
 
 </body>
+
 <!-- Script For javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
 <!-- tilt.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
 <!-- Lightbox.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- Our file -->
-    <script src="Js/Main.js"></script>
+    <script src="JS/Main.js"></script>
+
+    
 
 </html>

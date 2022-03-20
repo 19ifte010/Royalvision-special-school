@@ -11,3 +11,9 @@ function removeActiveClasses(){
          panel.classList.remove('active');
     });
 }
+
+function activeorInactive(){
+       let element = document.getElementById('Aadhar Card');
+       console.log(element);
+       element.className = "active";
+}

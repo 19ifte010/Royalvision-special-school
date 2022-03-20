@@ -1,3 +1,4 @@
+<?php include "db.php" ?>
 <!-- Header -->
 <?php include "includes/header.php" ?>
 
@@ -54,25 +55,45 @@
         </div>
         <div class="col-md-6 p-2">
             <div class="container bg-light p-4">
-                <form> 
+                <?php 
+                   if(isset($_POST['send'])){
+                       $name = mysqli_real_escape_string($connection,$_POST['firstname']);
+                       $email = mysqli_real_escape_string($connection,$_POST['email']);
+                       $subject = mysqli_real_escape_string($connection, $_POST['subject']);
+                       $message = mysqli_real_escape_string($connection,$_POST['message']);
+
+                       $query = "INSERT INTO contactus (sendername,senderemail,subject,message) VALUES ('$name','$email','$subject','$message')";
+                       $result = mysqli_query($connection,$query);
+
+                       if(!$result){
+                        ?>
+                        <script>
+                            alert("Something wrong in website please try again later");
+                        </script>
+                    <?php
+                       }
+
+                   }
+                ?>
+                <form action="contactUs.php" method="POST"> 
                 <div class="form-group mb-1">
                     <label for="FirstName">Name</label>
-                    <input type="text" class="form-control" id="FirstName" placeholder="FirstName" required>
+                    <input type="text" class="form-control" id="FirstName" name="firstname" placeholder="FirstName" required>
                 </div>
                 <div class="form-group mb-1">
                     <label for="Email">Email</label>
-                    <input type="email" class="form-control" id="Email" placeholder="Email" required>
+                    <input type="email" class="form-control" id="Email" name="email" placeholder="Email" required>
                 </div>
                 <div class="form-group mb-1">
                     <label for="Subject">Subject</label>
-                    <input type="text" class="form-control" id="Subject" placeholder="Subject" required>
+                    <input type="text" class="form-control" id="Subject" name="subject" placeholder="Subject" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="Message">Message</label>
-                    <textarea name="Message" id="Message"  type="text" class="form-control"></textarea>
+                    <textarea  id="Message"  type="text" name="message" class="form-control"></textarea>
                 </div>
                 <div class="form-group d-flex justify-content-center">
-                    <input type="Submit" value="send" class="btn btn-danger">
+                    <input type="Submit" value="send" name="send" class="btn btn-danger">
                 </div>
               
             </div>

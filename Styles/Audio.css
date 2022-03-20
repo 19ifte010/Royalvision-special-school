@@ -1,0 +1,19 @@
+.audio-player-container{
+    min-height: 100vh;
+}
+.audio-player-row{
+    display: flex;
+    justify-content: space-between;
+}
+.audio-player-row-lst{
+    display: flex;
+    justify-content: space-evenly;
+}
+.audio-player{
+
+    background-color: #2b5876;
+    padding : 20px;
+    border-radius: 10px;
+    width: max-content;
+  
+}

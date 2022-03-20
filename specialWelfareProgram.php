@@ -2,10 +2,10 @@
 <?php include "includes/header.php" ?>
 
 <!-- Navigation -->
-<?php include "Component/nav.php"?>
+<?php include "Component/nav.php" ?>
 
 <div class="d-flex justify-content-center">
-    <img src="Img/special welfare .jpg" alt="Special Welfare Program" width="100%" class="img-fluid">
+    <img src="Img/SpecialWelfare/HeroImg.png" alt="Special Welfare Program" width="100%" class="img-fluid">
 </div>
 
 
@@ -23,6 +23,35 @@
     </ul>
 </div>
 
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-4 mb-5">
+            <h2 class="mb-2" style="color: #2b5876; text-decoration:underline; font-weight: bold">Dress distribution</h2>
+            <a href="Img/SpecialWelfare/DressDistribution.png" data-fancybox="img" data-title="My caption">
+                <img src="Img/SpecialWelfare/DressDistribution.png" alt="img1" width="300" height="300" style="border: 2px solid black">
+            </a>
+        </div>
+        <div class="col-md-4 mb-5">
+            <h2 class="mb-2" style="color: #2b5876; text-decoration:underline; font-weight: bold">Rice with grocery</h2>
+            <a href="Img/SpecialWelfare/RiceWithGrossery-1.png" data-fancybox="img" data-title="My caption">
+                <img src="Img/SpecialWelfare/RiceWithGrossery-1.png" alt="img2" width="300" height="300" style="border: 2px solid black">
+            </a>
+        </div>
+        <div class="col-md-4 mb-5">
+            <h2 class="mb-2" style="color: #2b5876; text-decoration:underline; font-weight: bold">Rice with grocery</h2>
+            <a href="Img/SpecialWelfare/RiceWithGrossery-2.png" data-fancybox="img" data-title="My caption">
+                <img src="Img/SpecialWelfare/RiceWithGrossery-2.png" alt="img1" width="300" height="300" style="border: 2px solid black">
+            </a>
+        </div>
+        <div class="col-md-4 mb-5">
+            <h2 class="mb-2" style="color: #2b5876; text-decoration:underline; font-weight: bold">Welfare program</h2>
+            <a href="Img/SpecialWelfare/WelfareProgram.png" data-fancybox="img" data-title="My caption">
+                <img src="Img/SpecialWelfare/WelfareProgram.png" alt="img1" width="300" height="300" style="border: 2px solid black">
+            </a>
+        </div>
+
+    </div>
+</div>
 
 
 

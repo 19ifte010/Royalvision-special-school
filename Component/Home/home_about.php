@@ -1,7 +1,7 @@
 <div class="about-us col-md-12 col-sm-12">
     <div class="row">
         <div class="col-md-6 col-sm-12 about-img">
-            <img src="Img/Royal.jfif" class="img-fluid" data-tilt>
+            <img src="Img/Home_about.jpeg" class="img-fluid" data-tilt>
         </div>
         <div class=" col-md-6 col-sm-12 about-content">
             <div class="contain_h1">
