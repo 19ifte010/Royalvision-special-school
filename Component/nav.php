@@ -1,19 +1,18 @@
+
 <?php
 
-session_start();
+// session_start();
 
-@include '../db.php';
+// @include '../db.php';
 
-if(!isset($_SESSION['name']) || !$_SESSION['usertype']=='User'){
-    if(!headers_sent()){
-        header('location:index.php');
-    }else{
-        echo '<script type="text/javascript">windows.location.href="index.php"</script>';
-    }
- }
+// if(!isset($_SESSION['name']) || !$_SESSION['usertype']=='User'){
+//     if(!headers_sent()){
+//         header('location:index.php');
+//     }else{
+//         echo '<script type="text/javascript">windows.location.href="index.php"</script>';
+//     }
+//  }
 
-
- 
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark nav-padding nav-color sticky-top">
     <div class="container-fluid">
@@ -26,13 +25,13 @@ if(!isset($_SESSION['name']) || !$_SESSION['usertype']=='User'){
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-md-auto gap-4 nav-center">
                 <li class="nav-item rounded">
-                    <a class="nav-link hover-en" href="Home.php">Home</a>
+                    <a class="nav-link hover-en" href="index.php">Home</a>
                 </li>
                 <li class="nav-item rounded">
                     <a class="nav-link hover-en" href="About.php">About us</a>
                 </li>
                 <li class="nav-item dropdown rounded">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Projects</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Registration</a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="specialSchool.php">Special school</a></li>
                         <li><a class="dropdown-item" href="rehabilationCenter.php">Rehabilitation Centre</a></li>
@@ -63,30 +62,14 @@ if(!isset($_SESSION['name']) || !$_SESSION['usertype']=='User'){
                 <li class="nav-item rounded">
                     <a class="nav-link hover-en" href="contactUs.php">Contact us</a>
                 </li>
+                <li class='nav-item dropdown rounded'>
+                            <a class='nav-link dropdown-toggle' href='#' id='navbarDropdown' role='button' data-bs-toggle='dropdown' aria-expanded='false'>Profile</a>
+                            <ul class='dropdown-menu dropdown-menu-end' aria-labelledby='navbarDropdown'>
+                                <li><a class='dropdown-item' href='login.php'>Login</a></li>
+                                <li><a class='dropdown-item' href='register.php'>signup</a></li>
+                            </ul>
+                </li>;
 
-                <?php                   
-                  if($_SESSION['usertype']=='Admin'){
-                      echo 
-                      "<li class='nav-item dropdown rounded'>
-                            <a class='nav-link dropdown-toggle' href='#' id='navbarDropdown' role='button' data-bs-toggle='dropdown' aria-expanded='false'>Profile</a>
-                            <ul class='dropdown-menu dropdown-menu-end' aria-labelledby='navbarDropdown'>
-                                <li><a class='dropdown-item' href='#'>{$_SESSION['name']}</a></li>
-                                <li><a class='dropdown-item' href='admin.php'>Admin page</a></li>
-                                <li><a class='dropdown-item' href='logout.php'>Logout</a></li>
-                            </ul>
-                       </li>";
-  
-                  }else{
-                      echo
-                      "<li class='nav-item dropdown rounded'>
-                            <a class='nav-link dropdown-toggle' href='#' id='navbarDropdown' role='button' data-bs-toggle='dropdown' aria-expanded='false'>Profile</a>
-                            <ul class='dropdown-menu dropdown-menu-end' aria-labelledby='navbarDropdown'>
-                                <li><a class='dropdown-item' href='#'>{$_SESSION['name']}</a></li>
-                                <li><a class='dropdown-item' href='logout.php'>Logout</a></li>
-                            </ul>
-                       </li>";
-                  }
-                ?>
             </ul>
         </div>
     </div>

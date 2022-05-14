@@ -2,7 +2,21 @@
 <?php include "includes/header.php" ?>
 
 <!--  -->
-<?php include "Component/nav.php" ?>
+<?php
+@session_start();
+include "db.php";
+
+if(@$_SESSION['usertype']=='User'){
+    @include "Component/nav_user.php";
+ }
+if(@$_SESSION['usertype']=='Admin'){
+    @include "Component/nav_admin.php";
+ }
+ else{
+    @include "Component/nav.php";
+ }
+
+?>
 
 <div class="d-flex justify-content-center">
     <img src="Img/CommuityBased/HeroImg.png" alt="Special Welfare Program" width="100%" class="img-fluid">
@@ -18,9 +32,21 @@
 <div class="container mb-5">
     <div class="row">
         <div class="col-md-12">
-            <p style="font-size: 19px;">
-                Royalvision has been running a community based rehabilitation program for the welfare of the persons with disabilities in thiruparankundram, Madurai district more than 1522 differently abled persons are benefited directly and indirectly. It is looked after by a program officer with MSW qualification and 10 field staffs.
-            </p>
+            <p class="mb-5">
+            ROYALVISION has been conducting a Community Based Rehabilitation (CBR) program in
+            Thiruparankundram block of Madurai District for the welfare of the PWDs of all kinds. The
+            purpose of the CBR is to facilitate our service performances to the unreached beneficiaries
+            located in other parts of the district. This CBR camps are regularly organised to identify the
+            needs of the persons with disabilities based on which the organization designs and executes
+            the welfare measures such as obtaining disability card, physically handicapped pension,UDID
+            card ,maintenance grants , and monthly honorarium to the unemployed youths, medical
+            services, health check-ups, scholarship assistance, skill training, loan for self-employment
+            etc., Since the COVID 19 pandemic and the SOP (Standard Operating Procedure) had been
+            strictly followed by our staffs of ROYALVISION in this CBR program. The selected
+            beneficiaries are referred to reputed institutions and mainstream with government welfare
+            schemes for further support and assistance. Under this project the disability identity card has been issued to PWDs, 100% maintenance grant has been obtained and about 27 differently
+            abled persons are registered under TN Differently Abled Person's Welfare Board. A 100%
+            survey in our targeted areas enabled us to prepare an error free individual bio-data is provided for differently abled persons are benefited directly and indirectly through this service program.</p>
 
         </div>
     </div>

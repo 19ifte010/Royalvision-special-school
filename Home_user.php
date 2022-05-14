@@ -3,7 +3,7 @@
 <?php include 'includes/header.php' ?>
 
 <!-- Navbar -->
-<?php include 'Component/nav.php' ?>
+<?php include 'Component/nav_user.php' ?>
 
 <!-- Carousel -->
 <?php include 'Component/Home/carousel.php' ?>

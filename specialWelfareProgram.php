@@ -2,25 +2,41 @@
 <?php include "includes/header.php" ?>
 
 <!-- Navigation -->
-<?php include "Component/nav.php" ?>
+<?php
+@session_start();
+include "db.php";
+
+if(@$_SESSION['usertype']=='User'){
+    @include "Component/nav_user.php";
+ }
+if(@$_SESSION['usertype']=='Admin'){
+    @include "Component/nav_admin.php";
+ }
+ else{
+    @include "Component/nav.php";
+ }
+
+?>
 
 <div class="d-flex justify-content-center">
     <img src="Img/SpecialWelfare/HeroImg.png" alt="Special Welfare Program" width="100%" class="img-fluid">
 </div>
 
-
 <div class="splsch">
     <div class="container mt-5 mb-5 spshcl_content">
-        <h1 class="text-center spschl_text_line">SPECIAL WELFARE PROGRAM</h1>
+        <h1 class="text-center spschl_text_line">SPECIAL WELFARE PROGRAM FOR DIFFERENTLY ABLED</h1>
     </div>
-</div>
-
-<div class="splWelareProgramContent container mb-5">
-    <ul class="list-group list-group-numbered">
-        <li class="list-group-item p-5">Royalvision is largest volunteering organization established in the year 2007. The trust is established by Mr.Ulagasandron MA., BL and registered under “Indian Trust Act 1882” with the motive to spread the welfare and priority based activities to the various welfare activities for the differently abled persons.</li>
-        <li class="list-group-item p-5">Special welfare program rehabilitation center for differently abled local guardianship certificate, UD id card registration special school for intellectual disability niramaya insurance audio library with 18 schemes to manage our center.</li>
-        <li class="list-group-item p-5">Royalvision for the disables all over India and wish to inform that this is a non profit and non government organization started with committee and dedicated social workers to help the persons with disabilities.</li>
-    </ul>
+    <div class="container">
+        <p class="mb-5">The Social service of ROYALVISION Trust does not end with the work of upliftment of the differently abled and visually impaired individuals. In fact it extends beyond that to take care of their families too. A survey of their families was first made to recognize and identify the BPL families among them. The families with more than one differently abled person are
+        identified. Finally the families with less than a monthly income of Rs.5000/- are short listed
+        from among which 50 families are finally selected to be helped. All the chosen families are
+        freely provided with the necessary and 21 types of grocery items every month. All the
+        expenses incurred in the payment of educational tuition fees, Purchase of books, exam fees
+        and uniforms are fully met with by Royalvision trust. During festive occasions the differently
+        abled are provided with new dresses. The visually impaired in those families are given the
+        white cane free of cost every year on the white cane day
+        </p>
+    </div>
 </div>
 
 <div class="container mt-5 mb-5">

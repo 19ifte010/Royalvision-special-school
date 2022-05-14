@@ -3,7 +3,21 @@
 <?php include "includes/header.php" ?>
 
 <!-- navigation -->
-<?php include "Component/nav.php" ?>
+<?php
+@session_start();
+include "db.php";
+
+if(@$_SESSION['usertype']=='User'){
+    @include "Component/nav_user.php";
+ }
+if(@$_SESSION['usertype']=='Admin'){
+    @include "Component/nav_admin.php";
+ }
+ else{
+    @include "Component/nav.php";
+ }
+
+?>
 
 
 <div class="d-flex justify-content-center">
@@ -246,7 +260,7 @@
             </div>
         </div>
         <marquee class="text-danger mb-5">
-            <h3>NOTE: Bring Aadhar card and VO certificate for other services to our office</h3>
+            <h3>NOTE: Bring Disability card and VO certificate for other services to our office</h3>
         </marquee>
         <div class="container mt-5 mb-5">
             <div class="row">
@@ -272,8 +286,31 @@
                         <p>National ID card</p>
                     </div>
                     <div class="services service-2">
+                        <p>Bus Pass</p>
+                    </div>
+                    <div class="services service-2">
+                        <p>Railway concession and Smart card</p>
+                    </div>
+                    <div class="services service-2">
+                        <p>Aid and Appliances</p>
+                    </div>
+                    <div class="services service-2">
+                        <p>Physically Handicapped Pension(T.P le only)</p>
+                    </div>  
+                    <div class="services service-2">
+                        <p>Maintenance Grants for Disabled Persons</p>
+                    </div>
+                    <div class="services service-2">
+                        <p>Scholarships</p>
+                    </div>
+                    <div class="services service-2">
+                        <p>Health Insurance Scheme for PWD's</p>
+                    </div>
+                    <div class="services service-2">
                         <p>Scribe</p>
                     </div>
+                </div>
+                <div class="col-md-6">
                     <div class="services service-2">
                         <p>Placement Services</p>
                     </div>
@@ -281,36 +318,13 @@
                         <p>Reading and Recording</p>
                     </div>
                     <div class="services service-2">
-                        <p>Braille and Audio Books</p>
+                        <p>Braille & audio books</p>
                     </div>
                     <div class="services service-2">
                         <p>Legal Advocacy</p>
                     </div>
                     <div class="services service-2">
                         <p>Guidance and counciling</p>
-                    </div>
-                    <div class="services service-2">
-                        <p>Maintenance Grants for Disabled Persons</p>
-                    </div>
-                    <div class="services service-2">
-                        <p>Scholarships</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="services service-2">
-                        <p>Railway concession and Smart card</p>
-                    </div>
-                    <div class="services service-2">
-                        <p>Bus Pass</p>
-                    </div>
-                    <div class="services service-2">
-                        <p>Aid and Appliances</p>
-                    </div>
-                    <div class="services service-2">
-                        <p>Physically Handicapped Pension(T.P le only)</p>
-                    </div>
-                    <div class="services service-2">
-                        <p>Health Insurance Scheme for PWD's</p>
                     </div>
                     <div class="services service-2">
                         <p>Therapy for myopathy patients</p>

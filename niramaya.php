@@ -4,7 +4,21 @@
 <?php include "includes/header.php" ?>
 
 <!-- Navigation -->
-<?php include "Component/nav.php" ?>
+<?php
+@session_start();
+include "db.php";
+
+if(@$_SESSION['usertype']=='User'){
+    @include "Component/nav_user.php";
+ }
+if(@$_SESSION['usertype']=='Admin'){
+    @include "Component/nav_admin.php";
+ }
+ else{
+    @include "Component/nav.php";
+ }
+
+?>
 
 <div class="d-flex justify-content-center mb-5">
     <img src="Img/Niramaya/HeroImg.png" alt="Special Welfare Program" width="100%" class="img-fluid">
@@ -22,7 +36,11 @@
 </div>
 
 <div class="niramayaContent container mb-5">
-    <p>Insurance scheme for intellectual disability, autism, cerebral palsy and multiple disability is being implemented under the National Trust Act 1999. Niramaya insurance scheme is a unique multipurpose for intellectual disability for the above mention differently abled. Royalvision is the implementing agency for this project in Madurai district</p>
+    <p>The National Trust Act 1999 was also promoted the NIRAMAYA Insurance Scheme
+which is a specialised scheme for providing insurance packages and policy benefits to
+the Intellectual disabilities, in that our ROYALVISION is the only institution for
+facilitating this Niramaya Insurance Scheme at Madurai District to facilitate the
+intellectual disabilities supported by this insurance through our organisation</p>
 </div>
 
 <div class="form_heading mb-5" id="Registration">
@@ -44,8 +62,202 @@
                $BPL = $_POST['BPL'];
                $address = $_POST['address'];
 
-               $query = "INSERT INTO niramaya (stdfirstname, stdlastname, gender, dob, phonenumber, maritalstatus, f_m_g_name,guardianrelation, nominee, BPL, address) "; 
-               $query .= "VALUES('$stdfirstname','$stdlastname','$gender','$dob','$phonenumber','$maritalstatus','$f_m_g_name','$guardianrelation','$nominee','$BPL','$address')";
+               $max = 2097152;
+               $extensionArray = array('png', 'jpg', 'jpeg', 'pdf');
+  
+               $disabilityCard =  $_FILES['disabilitycard'];
+               $disabilityCardName = $disabilityCard['name'];
+               $disabilityCardError = $disabilityCard['error'];
+               $disabilityCardTemp = $disabilityCard['tmp_name'];
+               $disabilityCardExt = explode('.', $disabilityCardName);
+               $disabilityCardCheck = strtolower(end($disabilityCardExt));
+               // Validation start
+               if (!in_array($disabilityCardCheck, $extensionArray)) {
+               ?>
+                   <script>
+                       alert("only jpg/png/jpeg/pdf is allowed");
+                   </script>
+               <?php
+                   exit();
+               }
+               if ($disabilityCard["size"] > $max) {
+               ?>
+                   <script>
+                       alert("file must be less than 2mb");
+                   </script>
+           <?php
+                   exit();
+               }
+               // Validation End
+
+               // Upload File
+               if (in_array($disabilityCardCheck, $extensionArray)) {
+                   $disabilitydestinationFile = 'upload/disabilitycard/'.$phonenumber.'-'. $disabilityCardName;
+                   move_uploaded_file($disabilityCardTemp, $disabilitydestinationFile);
+               }
+
+            //    Disability Photo
+                
+               $disabilityphoto =  $_FILES['disabilityphoto'];
+               $disabilityphotoName = $disabilityphoto['name'];
+               $disabilityphotoError = $disabilityphoto['error'];
+               $disabilityphotoTemp = $disabilityphoto['tmp_name'];
+               $disabilityphotoExt = explode('.', $disabilityphotoName);
+               $disabilityphotoCheck = strtolower(end($disabilityphotoExt));
+               // Validation start
+               if (!in_array($disabilityphotoCheck, $extensionArray)) {
+               ?>
+                   <script>
+                       alert("only jpg/png/jpeg/pdf is allowed");
+                   </script>
+               <?php
+                   exit();
+               }
+               if ($disabilityphoto["size"] > $max) {
+               ?>
+                   <script>
+                       alert("file must be less than 2mb");
+                   </script>
+           <?php
+                   exit();
+               }
+               // Validation End
+
+               // Upload File
+               if (in_array($disabilityphotoCheck, $extensionArray)) {
+                   $disabilityphotodestinationFile = 'upload/disabilityphoto/'.$phonenumber.'-'. $disabilityphotoName;
+                   move_uploaded_file($disabilityphotoTemp, $disabilityphotodestinationFile);
+               }
+
+            //    GuardianshipCertificate
+
+            $guardianshipcertificate =  $_FILES['guardianshipcertificate'];
+            $guardianshipcertificateName = $guardianshipcertificate['name'];
+            $guardianshipcertificateError = $guardianshipcertificate['error'];
+            $guardianshipcertificateTemp = $guardianshipcertificate['tmp_name'];
+            $guardianshipcertificateExt = explode('.', $guardianshipcertificateName);
+            $guardianshipcertificateCheck = strtolower(end($guardianshipcertificateExt));
+            // Validation start
+            if (!in_array($guardianshipcertificateCheck, $extensionArray)) {
+            ?>
+                <script>
+                    alert("only jpg/png/jpeg/pdf is allowed");
+                </script>
+            <?php
+                exit();
+            }
+            if ($guardianshipcertificate["size"] > $max) {
+            ?>
+                <script>
+                    alert("file must be less than 2mb");
+                </script>
+        <?php
+                exit();
+            }
+            // Validation End
+
+            // Upload File
+            if (in_array($guardianshipcertificateCheck, $extensionArray)) {
+                $guardianshipcertificatedestinationFile = 'upload/guardianshipcertificate/'.$phonenumber.'-'. $guardianshipcertificateName;
+                move_uploaded_file($guardianshipcertificateTemp, $guardianshipcertificatedestinationFile);
+            }
+
+
+
+               $aadharcard =  $_FILES['aadharcard'];
+               $aadharcardName = $aadharcard['name'];
+               $aadharcardError = $aadharcard['error'];
+               $aadharcardTemp = $aadharcard['tmp_name'];
+               $aadharcardExt = explode('.', $aadharcardName);
+               $aadharcardCheck = strtolower(end($aadharcardExt));
+
+               //upload File
+               if (!in_array($aadharcardCheck, $extensionArray)) {
+                   ?>
+                   <script>
+                       alert("only jpg/png/jpeg is allowed");
+                   </script>
+               <?php
+                   exit();
+               }
+               if ($aadharcard["size"] > $max) {
+               ?>
+                   <script>
+                       alert("file must be less than 2mb");
+                   </script>
+               <?php
+                   exit();
+               }
+               
+               if (in_array($aadharcardCheck, $extensionArray)) {
+                   $aadhardestinationFile = 'upload/aadharcard/'.$phonenumber.'-'. $aadharcardName;
+                   move_uploaded_file($aadharcardTemp, $aadhardestinationFile);
+               }
+               
+            //    Income Certificate
+            $incomecertificate =  $_FILES['incomecertificate'];
+            $incomecertificateName = $incomecertificate['name'];
+            $incomecertificateError = $incomecertificate['error'];
+            $incomecertificateTemp = $incomecertificate['tmp_name'];
+            $incomecertificateExt = explode('.', $incomecertificateName);
+            $incomecertificateCheck = strtolower(end($incomecertificateExt));
+
+            //upload File
+            if (!in_array($incomecertificateCheck, $extensionArray)) {
+                ?>
+                <script>
+                    alert("only jpg/png/jpeg is allowed");
+                </script>
+            <?php
+                exit();
+            }
+            if ($incomecertificate["size"] > $max) {
+            ?>
+                <script>
+                    alert("file must be less than 2mb");
+                </script>
+            <?php
+                exit();
+            }
+            
+            if (in_array($incomecertificateCheck, $extensionArray)) {
+                $incomecertificatedestinationFile = 'upload/incomecertificate/'.$phonenumber.'-'. $incomecertificateName;
+                move_uploaded_file($incomecertificateTemp, $incomecertificatedestinationFile);
+            }
+            
+            // Bank Passbook
+            $bankpassbook =  $_FILES['bankpassbook'];
+            $bankpassbookName = $bankpassbook['name'];
+            $bankpassbookError = $bankpassbook['error'];
+            $bankpassbookTemp = $bankpassbook['tmp_name'];
+            $bankpassbookExt = explode('.', $bankpassbookName);
+            $bankpassbookCheck = strtolower(end($bankpassbookExt));
+
+            //upload File
+            if (!in_array($bankpassbookCheck, $extensionArray)) {
+                ?>
+                <script>
+                    alert("only jpg/png/jpeg is allowed");
+                </script>
+            <?php
+                exit();
+            }
+            if ($bankpassbook["size"] > $max) {
+            ?>
+                <script>
+                    alert("file must be less than 2mb");
+                </script>
+            <?php
+                exit();
+            }
+            
+            if (in_array($bankpassbookCheck, $extensionArray)) {
+                $bankpassbookdestinationFile = 'upload/bankpassbook/'.$phonenumber.'-'. $bankpassbookName;
+                move_uploaded_file($bankpassbookTemp, $bankpassbookdestinationFile);
+            }
+
+               $query = "INSERT INTO niramaya (stdfirstname, stdlastname, gender, dob, phonenumber, maritalstatus, f_m_g_name,guardianrelation, nominee, BPL, address, disabilityCard,disabilityphoto, guardianshipcertificate, aadharcard, incomecertificate, bankpassbook) "; 
+               $query .= "VALUES('$stdfirstname','$stdlastname','$gender','$dob','$phonenumber','$maritalstatus','$f_m_g_name','$guardianrelation','$nominee','$BPL','$address', '$disabilitydestinationFile' , '$disabilityphotodestinationFile' , '$guardianshipcertificatedestinationFile', '$aadhardestinationFile', '$incomecertificatedestinationFile', '$bankpassbookdestinationFile' )";
 
                $result = mysqli_query($connection,$query);
 
@@ -111,14 +323,51 @@
                 <input type="text" class="form-control" id="Nominee" name="nominee"  required>
             </div>
         </div>
+        <div class="row g-3">
+            <div class="form-group col-md-4">
+                <label for="Disability card" class="form-label">Disability Card</label>
+                <small class="disable">(file size must be less than 1mb & only jgp/png/jpeg format is allowed)</small>
+                <input class="form-control" type="file" id="Disability card" name="disabilitycard" required>
+            </div> 
+            <div class="form-group col-md-4">
+                <label for="Disability Photo" class="form-label">Disability Photo</label>
+                <small class="disable">(file size must be less than 1mb & only jgp/png/jpeg format is allowed)</small>
+                <input class="form-control" type="file" id="Disability Photo" name="disabilityphoto" required>
+            </div>            
+            <div class="form-group col-md-4">
+                <label for="Guardianship Certificate" class="form-label">Guardianship Certificate</label>
+                <small class="disable">(file size must be less than 1mb & only jgp/png/jpeg format is allowed)</small>
+                <input class="form-control" type="file" id="Guardianship Certificate" name="guardianshipcertificate" required>
+            </div>                        
+        </div>
+        <div class="row g-3">
+            <div class="form-group col-md-4">
+                <label for="Aadhar Card" class="form-label">Aadhar Card</label>
+                <small class="disable">(file size must be less than 1mb & only jgp/png/jpeg format is allowed)</small>
+                <input class="form-control" type="file" id="Aadhar Card" name="aadharcard" required>
+            </div>    
+            <div class="form-group col-md-4">
+                <label for="Income Certificate" class="form-label">Income Certificate</label>
+                <small class="disable">(file size must be less than 1mb & only jgp/png/jpeg format is allowed)</small>
+                <input class="form-control" type="file" id="Income Certificate" name="incomecertificate" required>
+            </div> 
+            <div class="form-group col-md-4">
+                <label for="BankPassbook" class="form-label">BankPassbook (frontpage) </label>
+                <small class="disable">(file size must be less than 1mb & only jgp/png/jpeg format is allowed)</small>
+                <input class="form-control" type="file" id="BankPassbook" name="bankpassbook" required>
+            </div>            
+           
+        
+
+        </div>
 
         <div class="row g-3">
             <div class="form-group col-md-4">
             <label for="BPL">BPL</label>
                 <select class="form-select" id="BPL" name="BPL" required>
                 <option disabled value="" selected hidden>BPL</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
+                    <option value="Yes">Yes <b class="ml-3">Rs-250</b> </option>
+                    <option value="No"> No   <b class=" ml-3">Rs-500</b> </option>
                 </select>
 
             </div>

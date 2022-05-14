@@ -45,21 +45,14 @@
             <div class="our-objectives-content offset-md-1 col-md-5  col-sm-12 slide-right">
                 <h1>
                     <span class="objectives-line">Our Objectives</span>
-
                 </h1>
                 <ul>
                     <li>To spread light and happiness in the life of the differently disabled.</li>
                     <li>To raise their quality of life through necessary education, skill training and employment.</li>
                     <li>To take care of their health problems through regular, periodical medical camps.</li>
                     <li>Creation and sustenance of awareness about health hazards including AIDS and cancer through regular and periodical interaction with theoretical and practical experts in the field.</li>
-                    <li>To establish an audio library for the assistance of the visually impaired.</li>
-                    <li>To make arrangements for a short but comfortable stay of the differently abled.</li>
-                    <li>To form and maintain SHG's in order to empower the differently abled.</li>
-                    <li>To make arrangements for micro credit facilities to encourage the differently abled to become self-employed/entrepreneurs.</li>
-                    <li>To establish/run a home for the aged with visual impairements. </li>
                 </ul>
             </div>
-
         </div>
     </div>
 </div>

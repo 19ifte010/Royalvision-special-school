@@ -2,7 +2,21 @@
 <?php include "includes/header.php" ?>
 
 <!-- Navigation -->
-<?php include "Component/nav.php" ?>
+<?php
+@session_start();
+include "db.php";
+
+if(@$_SESSION['usertype']=='User'){
+    @include "Component/nav_user.php";
+ }
+if(@$_SESSION['usertype']=='Admin'){
+    @include "Component/nav_admin.php";
+ }
+ else{
+    @include "Component/nav.php";
+ }
+
+?>
 
 <div class="container mt-5 mb-5">
     <h1 style="color: #2b5876; border-bottom: 2px solid #2b5876; width: max-content; font-weight: bolder;" class="pb-2 mb-5">School Activity</h1>

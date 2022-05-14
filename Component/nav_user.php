@@ -1,16 +1,19 @@
 <?php
-@session_start();
+
+session_start();
+
 @include '../db.php';
 
-
-if(!isset($_SESSION['name']) || $_SESSION['usertype']=='User'){
+if(!isset($_SESSION['name']) || !$_SESSION['usertype']=='User'){
     if(!headers_sent()){
         header('location:index.php');
     }else{
-        echo '<script type="text/javascript">window.location.href="index.php"</script>';
+        echo '<script type="text/javascript">windows.location.href="index.php"</script>';
     }
  }
 
+
+ 
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark nav-padding nav-color sticky-top">
     <div class="container-fluid">
@@ -23,7 +26,7 @@ if(!isset($_SESSION['name']) || $_SESSION['usertype']=='User'){
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-md-auto gap-4 nav-center">
                 <li class="nav-item rounded">
-                    <a class="nav-link hover-en" href="Home_admin.php">Home</a>
+                    <a class="nav-link hover-en" href="Home.php">Home</a>
                 </li>
                 <li class="nav-item rounded">
                     <a class="nav-link hover-en" href="About.php">About us</a>
@@ -60,8 +63,8 @@ if(!isset($_SESSION['name']) || $_SESSION['usertype']=='User'){
                 <li class="nav-item rounded">
                     <a class="nav-link hover-en" href="contactUs.php">Contact us</a>
                 </li>
-                <?php 
-                  
+
+                <?php                   
                   if($_SESSION['usertype']=='Admin'){
                       echo 
                       "<li class='nav-item dropdown rounded'>
@@ -84,7 +87,6 @@ if(!isset($_SESSION['name']) || $_SESSION['usertype']=='User'){
                        </li>";
                   }
                 ?>
-
             </ul>
         </div>
     </div>

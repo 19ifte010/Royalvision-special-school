@@ -2,7 +2,21 @@
 <?php include 'includes/header.php' ?>
 
 <!-- nav -->
-<?php include 'Component/nav.php' ?>
+<?php
+@session_start();
+include "db.php";
+
+if(@$_SESSION['usertype']=='User'){
+    @include "Component/nav_user.php";
+ }
+if(@$_SESSION['usertype']=='Admin'){
+    @include "Component/nav_admin.php";
+ }
+ else{
+    @include "Component/nav.php";
+ }
+
+?>
 
 
 
@@ -18,10 +32,34 @@
 <div class="splsch">
     <div class="container mt-5 mb-5 spshcl_content">
         <h1 class="text-center spschl_text_line">Special school</h1>
-        <p class="text-center sps">(special school for the multiple disabilities)</p>
+        <p class="text-center sps">(special school for the Intellectual disabilities)</p>
     </div>
     <div class="container">
-        <p class="mb-5">Royal vision runs a dedicated and fully structured special education program our aims at maximizing the potential of children. The program covers specific areas of functional academics and functional training, therapeutics(including physical and occupational therapy) and co-curricular activities. In addition, there are specific programs offering vocational training for older children. Socialization and extra curricular activities for all children. Our organization has been running and special school for the disabled childrens.</p>
+        <p class="mb-5"><b>Special school ROYALVISION</b> is focusing working on the welfare of the PWDs, and children with multiple disabilities. For achieving this, we have been running a “Special
+        School for Children with Intellectual Disabilities” since 2012, which has been, offering
+        productive rehabilitation services to the M.R children. Thus it is a milestone in the history of
+        our organisation. This school has about 48children aged from 5yrs to 16yrs with Intellectual
+        Disabilities, Autism, Cerebral Palsy and multiple disabilities under the individual care and
+        parental affection of a team of Special Educators, Care Takers and a Physiotherapist. The
+        children are trained and encouraged to play and learn activities with a specially designed
+        curriculum. Daily Yoga practice and a therapeutic intervention are practised. They are
+        assisted by speech therapy, dance therapy, skill enhancement classes, creative education
+        classes, value education etc. Physiotherapy is regular to needy.
+        </p>
+    </div>
+</div>
+<div class="splsch">
+    <div class="container mt-5 mb-5 spshcl_content">
+        <h1 class="text-center spschl_text_line">Parent's Meeting</h1>
+    </div>
+    <div class="container">
+        <p class="mb-5">The Parents Teachers Association (PTA) meeting held in every
+            four months, the progress report of each student is discussed with respective parents to know
+            the improvement of their child's IQ. It bridges the gap between the parents and teachers and
+            enables them personally to know the improvement in the intelligence extent of their children.
+            The parent's suggestions and valuable comments on institution activities are recorded which
+            help in designing and executing the plan for children's welfare in future
+        </p>
     </div>
 </div>
 

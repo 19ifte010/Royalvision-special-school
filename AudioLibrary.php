@@ -5,7 +5,18 @@
     <img src="Img/Audio library Hero.jpeg" alt="Special Welfare Program" width="100%" class="img-fluid">
 </div>
 
+<div class="splsch">
+    <div class="container mt-5 mb-5 spshcl_content">
+        <h1 class="text-center spschl_text_line">Audio Library</h1>
+    </div>
+    <div class="container">
+        <p class="mb-5">For enhancing the skill based development and to adopt quality lifestyle of V.Is, ROYALVISION had established a special Audio Library in Madurai in 2012 and in the past 8Years. It has been serving several visually impaired usefully. This special Audio Library has more than 1000 CDs of audios in Tamil & English related to Education, G.K, Politics, Social, Nature & Environment, and Entertainment. The visually impaired from our hostel and also of other parts of the district make use of our library materials and enjoy the benefits of Audio Library. It enables them to develop their knowledge and improve self-confidence to cope up their lifestyle with regular community.
+        </p>
+    </div>
+</div>
+
 <h1 class="text-center mt-3">மாற்றுத்திறனாளிகளுக்கான உரிமைச்சட்டம் 2016</h1>
+
 <div class="container mb-5 audio-player-container">
     <div class="row audio-player-row">
         <div class="col-md-4 audio-player mt-5">

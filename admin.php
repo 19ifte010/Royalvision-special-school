@@ -9,7 +9,22 @@
     }
 </style>
 <!-- Nav bar -->
-<?php include "Component/nav_admin.php" ?>
+<?php
+@session_start();
+include "db.php";
+
+if(@$_SESSION['usertype']=='User'){
+    @include "Component/nav_user.php";
+ }
+if(@$_SESSION['usertype']=='Admin'){
+    @include "Component/nav_admin.php";
+ }
+ else{
+    @include "Component/nav.php";
+ }
+
+?>
+
 <div class="complete-container mt-5">
     <div class="container mb-5">
         <form action="admin.php" method="POST">
@@ -410,6 +425,12 @@ if (isset($_POST['submit'])) {
                             <th>Nominee</th>
                             <th>BPL</th>
                             <th>Address</th>
+                            <th>DisabilityCard</th>
+                            <th>DisabilityPhoto</th>
+                            <th>GuardianshipCertificate</th>
+                            <th>Aadharcard</th>
+                            <th>IncomeCertificate</th>
+                            <th>BankPassbook</th>
 
                         </tr>
                     </thead>
@@ -417,6 +438,16 @@ if (isset($_POST['submit'])) {
                     $query = "SELECT * FROM {$tableName}";
                     $result = mysqli_query($connection, $query);
                     while ($row = mysqli_fetch_assoc($result)) {
+
+                        $disabilityCard = $row['disabilityCard'];
+                        $disabilityphoto = $row['disabilityphoto'];
+                        $guardianshipcertificate = $row['guardianshipcertificate'];
+                        $aadharcard = $row['aadharcard'];
+                        $incomecertificate = $row['incomecertificate'];
+                        $bankpassbook = $row['bankpassbook'];                        
+                        
+
+
                     ?>
                         <tbody>
                             <tr>
@@ -431,6 +462,128 @@ if (isset($_POST['submit'])) {
                                 <td><?php echo $row['nominee']; ?></td>
                                 <td><?php echo $row['BPL']; ?></td>
                                 <td><?php echo $row['address']; ?></td>
+                                <td>
+                                <?php
+                                    $fileExt = explode('.', $disabilityCard);
+                                    $fileCheck = strtolower(end($fileExt));
+                                    if (in_array($fileCheck, ['jpg', 'jpeg', 'png'])) {
+                                    ?>
+                                        <a href="<?php echo $disabilityCard ?>" data-fancybox="">
+                                            <img src="<?php echo $disabilityCard ?>" alt="img1" width="100">
+                                        </a>
+                                    <?php } else {
+                                    ?>
+                                        <a href="<?php echo $disabilityCard ?>" data-fancybox="">
+                                            <img src="Img/pdf.jpg" width="100%" height="200px" class="img-fluid" />
+                                        </a>
+
+
+                                    <?php  }
+                                    ?>
+
+                                </td>
+                                <td>
+                                <?php
+                                    $fileExt = explode('.', $disabilityphoto);
+                                    $fileCheck = strtolower(end($fileExt));
+                                    if (in_array($fileCheck, ['jpg', 'jpeg', 'png'])) {
+                                    ?>
+                                        <a href="<?php echo $disabilityphoto ?>" data-fancybox="">
+                                            <img src="<?php echo $disabilityphoto ?>" alt="img1" width="100">
+                                        </a>
+                                    <?php } else {
+                                    ?>
+                                        <a href="<?php echo $disabilityphoto ?>" data-fancybox="">
+                                            <img src="Img/pdf.jpg" width="100%" height="200px" class="img-fluid" />
+                                        </a>
+
+
+                                    <?php  }
+                                    ?>
+
+                                </td>
+                                <td>
+                                <?php
+                                    $fileExt = explode('.', $guardianshipcertificate);
+                                    $fileCheck = strtolower(end($fileExt));
+                                    if (in_array($fileCheck, ['jpg', 'jpeg', 'png'])) {
+                                    ?>
+                                        <a href="<?php echo $guardianshipcertificate ?>" data-fancybox="">
+                                            <img src="<?php echo $guardianshipcertificate ?>" alt="img1" width="100">
+                                        </a>
+                                    <?php } else {
+                                    ?>
+                                        <a href="<?php echo $guardianshipcertificate ?>" data-fancybox="">
+                                            <img src="Img/pdf.jpg" width="100%" height="200px" class="img-fluid" />
+                                        </a>
+
+
+                                    <?php  }
+                                    ?>
+
+                                </td>
+                                <td>
+                                    
+                                    <?php
+                                    $fileExt = explode('.', $aadharcard);
+                                    $fileCheck = strtolower(end($fileExt));
+                                    if (in_array($fileCheck, ['jpg', 'jpeg', 'png'])) {
+                                    ?>
+                                        <a href="<?php echo $aadharcard ?>" data-fancybox="">
+                                            <img src="<?php echo $aadharcard ?>" alt="img1" width="100">
+                                        </a>
+                                    <?php } else {
+                                    ?>
+                                        <a href="<?php echo $aadharcard ?>" data-fancybox="">
+                                            <img src="Img/pdf.jpg" width="100%" height="200px" class="img-fluid" />
+                                        </a>
+
+
+                                    <?php  }
+                                    ?>
+
+
+                                </td>
+                                <td>
+                                <?php
+                                    $fileExt = explode('.', $incomecertificate);
+                                    $fileCheck = strtolower(end($fileExt));
+                                    if (in_array($fileCheck, ['jpg', 'jpeg', 'png'])) {
+                                    ?>
+                                        <a href="<?php echo $incomecertificate ?>" data-fancybox="">
+                                            <img src="<?php echo $incomecertificate ?>" alt="img1" width="100">
+                                        </a>
+                                    <?php } else {
+                                    ?>
+                                        <a href="<?php echo $incomecertificate ?>" data-fancybox="">
+                                            <img src="Img/pdf.jpg" width="100%" height="200px" class="img-fluid" />
+                                        </a>
+
+
+                                    <?php  }
+                                    ?>
+                                </td>
+                                <td>
+                                <?php
+                                    $fileExt = explode('.', $bankpassbook);
+                                    $fileCheck = strtolower(end($fileExt));
+                                    if (in_array($fileCheck, ['jpg', 'jpeg', 'png'])) {
+                                    ?>
+                                        <a href="<?php echo $bankpassbook ?>" data-fancybox="">
+                                            <img src="<?php echo $bankpassbook ?>" alt="img1" width="100">
+                                        </a>
+                                    <?php } else {
+                                    ?>
+                                        <a href="<?php echo $bankpassbook ?>" data-fancybox="">
+                                            <img src="Img/pdf.jpg" width="100%" height="200px" class="img-fluid" />
+                                        </a>
+
+
+                                    <?php  }
+                                    ?>
+
+
+                                </td>
 
                             </tr>
 

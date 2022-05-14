@@ -5,7 +5,21 @@
 <?php include "includes/header.php" ?>
 
 <!-- Navigation -->
-<?php include "Component/nav.php" ?>
+<?php
+@session_start();
+include "db.php";
+
+if(@$_SESSION['usertype']=='User'){
+    @include "Component/nav_user.php";
+ }
+if(@$_SESSION['usertype']=='Admin'){
+    @include "Component/nav_admin.php";
+ }
+ else{
+    @include "Component/nav.php";
+ }
+
+?>
 
 <div class="d-flex justify-content-center mb-5">
     <img src="Img/LLCLG/HeroImg.png" alt="Special Welfare Program" width="100%" class="img-fluid">
@@ -13,34 +27,49 @@
 <div class="notify mb-5 mt-5">
     <a class="notifyText" href="#Registration">Note:Register below</a>
 </div>
-
 <div class="splsch">
     <div class="container mt-5 mb-5 spshcl_content">
-        <h1 class="text-center spschl_text_line">LLC(Local Level Committee) and LG(Legal Guardianship)</h1>
+        <h1 class="text-center spschl_text_line">LEGAL GUARDIANSHIP</h1>
+    </div>
+    <div class="container">
+        <p class="mb-5">Persons with Autism, Cerebral Palsy, Mental Retardation and Multiple Disabilities are in a
+            special situation because even after they reach 18 years of age, they are not seen as being
+            adequate to manage or take any legal decisions for their betterment. In case of Cerebral Palsy
+            and Multiple Disabilities there may be need for only limited guardianship because of the
+            availability of enabling mechanisms and /or scientific facilitation enabling persons to live
+            with the certain disabilities. The National Trust Act, therefore, enables a person with above
+            disabilities to have a guardian representing her/him throughout their lives.As per the Act, a
+            parent can get legal guardianship of their son or daughter with disability and represent them
+            even after they are 18 years of age.Parents are the Natural Guardians of their children till
+            their child turns -18. So they do not need to apply for guardianship until then. After that the
+            parents can apply for guardianship under the National Trust Act.In case the parents are not
+            available, or die unexpectedly so that there is no guardian left, a relative can either seek
+            guardianship for oneself or ask the local level committee to appoint another guardian for the
+            child. A relative could include- a sibling, grandparents, maternal and paternal uncles and
+            aunts.
+        </p>
     </div>
 </div>
-<div class="container">
-
-   <h1 style="text-decoration: underline; color:#2b5876">Local Level Committee</h1>
-   <p style="text-indent: 40px;">LLCs  have been advised to include following as co-opted members in addition to the statutory members to assist them in their functioning</p>
-   <ol class="list-group list-group-numbered mb-3">
-       <li class="list-group-item p-3">District Social Justice Officer/District Welfare Officer/District Rehabilitation Officer</li>
-       <li class="list-group-item p-3">Civil Surgeon or Chief Medical Officer</li>
-       <li class="list-group-item p-3">A Psychiatrist of the District Hospital</li>
-       <li class="list-group-item p-3">Reputed Lawyer in the district</li>
-   </ol>
-   <p style="text-indent: 40px;">Apart from above LLC could involve any other Govt. Officer or Disability Experts for rendering justice to the case and effective functioning.</p>
+<div class="splsch">
+    <div class="container mt-5 mb-5 spshcl_content">
+        <h1 class="text-center spschl_text_line">LOCAL LEVEL COMMITTEE & LEGAL GUARDIANSHIP</h1>
+    </div>
+    <div class="container">
+        <p class="mb-5">The National Trust Act 1999 is promoted the Local Level Committee for the welfare and
+            support of the PWDs, this Committee is chaired by the District Collector, NGO Member
+            (Royalvision) and person with disability member. Our ROYALVISION trust is functioning
+            as a local body membership of this committee and as a Legal Guardianships for
+            protecting the welfare of the Intellectual disabilities, Autism, Cerebral Palsy and Persons
+            with Multiple disorders facilitating the legally provided benefits rendered by the various
+            Govt welfare schemes etc., Applications received online for the above persons will be
+            personally reviewed by the staff member of our organization and it is recommended to
+            the District collector to issue guardianship certificates. Under the scheme currently we
+            are working in Madurai and Thoothukudi districts a local level committees headed by
+            the District collector respective districts
+        </p>
+    </div>
 </div>
 
-
-<div class="llclgContent container mb-5">
-    <ul class="list-group list-group-numbered">
-        <li class="list-group-item p-3">Royalvision operates on a local level committee set up under the National Trust Act 1999.our organization is on NGO member of this group of 4 people headed by the District collector</li>
-        <li class="list-group-item p-3">We are in the process of appointing a legal guardian for intellectual disability, autism, cerebral palsy and multiple disability classified under the National Trust Act 1999</li>
-        <li class="list-group-item p-3">Applications received online for the above persons will be personally reviewed by the staff member of our organization and it is recommended to the District collector to issue guardianship certificates.</li>
-        <li class="list-group-item p-3">Under the scheme currently we are working in Madurai and Thoothukudi districts a local level committees headed by the District collector respective districts</li>
-    </ul>
-</div>
 
 <div class="form_heading mb-5" id="Registration">
     <h1 class="text-center form_heading_line">Registration</h1>
@@ -361,8 +390,8 @@
                 <input class="form-control" type="file" id="Aadhar Card" name="aadharcard" required>
             </div>
             <div class="form-group col-md-4">
-                <label for="Medical Certificate" class="form-label">Medical Certificate</label>
-                <input class="form-control" type="file" id="Medical Certificate" name="medicalcertificate" required>
+                <label for="Medical Certificate" class="form-label">Medical Certificate (optional) </label>
+                <input class="form-control" type="file" id="Medical Certificate" name="medicalcertificate">
             </div>
             <div class="form-group col-md-4">
                 <label for="Consent Certificate" class="form-label">Consent Certificate</label>

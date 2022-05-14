@@ -1,9 +1,25 @@
-<?php include "db.php" ?>
 <!-- Header -->
 <?php include "includes/header.php" ?>
 
 <!-- Navigation -->
-<?php include "Component/nav.php" ?>
+<?php
+
+
+
+@session_start();
+include "db.php";
+
+if(@$_SESSION['usertype']=='User'){
+    @include "Component/nav_user.php";
+ }
+if(@$_SESSION['usertype']=='Admin'){
+    @include "Component/nav_admin.php";
+ }
+ else{
+    @include "Component/nav.php";
+ }
+
+?>
 
 <!-- Contact us -->
 <div class="splsch">
@@ -35,16 +51,6 @@
                             <td>Ulagasandron</td>
                             <td>Founder</td>
                             <td>9942979649</td>
-                        </tr>
-                        <tr>
-                            <td>S.GovindRaj</td>
-                            <td>Project Director</td>
-                            <td>7867055999</td>
-                        </tr>
-                        <tr>
-                            <td>K.Valarmathi</td>
-                            <td>Executive Director</td>
-                            <td>9786166333</td>
                         </tr>
                     </tbody>
                 </table>
